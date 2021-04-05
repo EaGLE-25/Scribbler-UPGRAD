@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="main-nav">
+  <header class="main-nav">
 		<div class="logo">
 			<h1>
 				ScriBBler
@@ -31,14 +31,19 @@
 			</button>
 		</div>
 	</header>
-	
-	<div class="modal-container hide">
+
+	<div class="container">
+     <button class="allPosts">All Posts</button>
+		 <button class="createPosts">Create Posts</button>
+	</div>
+
+	<div class="modal-container hide signup-modal" id="signup-modal">
 		<div class="modal">
 			<div class="modal-header">
 				<h3>
 					Get Started
 				</h3>
-				<span class="modal-close">
+				<span class="modal-close" onclick="closeModalById('signup-modal')">
 					<i class="fas fa-times"></i>
 				</span>
 			</div>
@@ -64,6 +69,39 @@
 					<button class="wide-btn">
 						SignUp
 					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal-container hide signin-modal" id="signin-modal">
+		<div class="modal">
+			<div class="modal-header">
+				<h3>
+					Welcome back!
+				</h3>
+				<span class="modal-close" onclick="closeModalById('signin-modal')">
+					<i class="fas fa-times"></i>
+				</span>
+			</div>
+			<hr class="modal-separator">
+			<div class="modal-body">
+				<form>
+					<div class="form-control">
+						<label>Username</label>
+						<input type="text" placeholder="Enter your Username" required/>
+					</div>
+					<div class="form-control">
+						<label>Password</label>
+						<input type="password" placeholder="Enter your Password" required/>
+					</div>
+					<button class="wide-btn">
+						SignIn
+					</button>
+					<p class="not-member">
+						Not a member?
+						<a href="#" class="signup-link">SignUp</a>
+					</p>
 				</form>
 			</div>
 		</div>

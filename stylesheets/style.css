@@ -10,13 +10,20 @@ html{
 
 body{
 	height:100vh;
+	background-image:url(/images/background.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
 }
+
 .main-nav{
 	display:flex;
 	justify-content:space-between;
+	padding:1rem;
 }
 .logo h1{
 	font-family: 'Montez', cursive;
+	color:blue;
 }
 .sub-heading{
 	font-family: 'Ubuntu Mono', monospace;
@@ -32,12 +39,11 @@ body{
 
 .modal-container{
 	height:100vh;
-	background:black;
+	background:rgba(0, 0, 0, 0.56);
 	position:absolute;
 	width:100%;
 	top:0;
 	left:0;
-	opacity:50%;
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -92,4 +98,30 @@ body{
 	border:none;
 	outline:none;
 	cursor:pointer;
+}
+.not-member{
+	width:100%;
+	text-align:center;
+	font-weight:bold;
+	color: black;
+	margin: .5rem 0;
+}
+
+.container{
+	height: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.allPosts,.createPosts{
+  padding: 1rem;
+	background-color: orange;
+	color: white;
+	outline: none;
+	border: none;
+	border-radius: .5rem;
+	font-weight: bold;
+	margin-right: .5rem;
+	cursor: pointer;
 }
