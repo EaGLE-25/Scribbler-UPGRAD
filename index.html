@@ -4,10 +4,71 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
+<script src="https://kit.fontawesome.com/d9b010d1ce.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
+    <header class="main-nav">
+		<div class="logo">
+			<h1>
+				ScriBBler
+			</h1>
+			<p class="sub-heading">
+				Explore, Imagine, Create
+			</p>
+		</div>
+		<div class="controls">
+			<button class="signup">
+				SignUp
+			</button>
+			<button class="signin">
+				SignIn
+			</button>
+		</div>
+	</header>
+	
+	<div class="modal-container hide">
+		<div class="modal">
+			<div class="modal-header">
+				<h3>
+					Get Started
+				</h3>
+				<span class="modal-close">
+					<i class="fas fa-times"></i>
+				</span>
+			</div>
+			<hr class="modal-separator">
+			<div class="modal-body">
+				<form>
+					<div class="form-control">
+						<label>Name</label>
+						<input type="text" placeholder="Enter your Name" required/>
+					</div>
+					<div class="form-control">
+						<label>Username</label>
+						<input type="text" placeholder="Enter your Username" required/>
+					</div>
+					<div class="form-control">
+						<label>Password</label>
+						<input type="password" placeholder="Enter your Password" required/>
+					</div>
+					<div class="form-control">
+						<label>Confirm Password</label>
+						<input type="password" placeholder="Re-Enter your Password" required/>
+					</div>
+					<button class="wide-btn">
+						SignUp
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<script src="scripts/common.js"></script>
 </body>
-
 </html>
