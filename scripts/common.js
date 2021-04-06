@@ -4,6 +4,11 @@ let modalCloseBtn = document.querySelector(".modal-close");
 let signupModal = document.querySelector(".signup-modal");
 let signinModal = document.querySelector(".signin-modal");
 let notMemberSignUp = document.querySelector(".not-member .signup-link");
+let createPostBtn = document.querySelector(".create-posts");
+let createPostModal = document.querySelector(".create-post-modal");
+
+
+console.log(createPostBtn);
 
 
 signupBtn.addEventListener("click",(e)=>{
@@ -12,6 +17,10 @@ signupBtn.addEventListener("click",(e)=>{
 
 signinBtn.addEventListener("click",(e)=>{
 	openModal(signinModal);
+})
+
+createPostBtn.addEventListener("click",(e)=>{
+	openModal(createPostModal);
 })
 
 notMemberSignUp.addEventListener("click",(e)=>{

@@ -35,6 +35,8 @@ body{
 	color:white;
 	cursor:pointer;
 	outline:none;
+	border-radius: .3rem;
+	font-weight: bold;
 }
 
 .modal-container{
@@ -57,7 +59,7 @@ body{
 }
 .modal{
 	background:white;
-	width:35%;
+	min-width:35%;
 	padding:1rem 1rem;
 }
 .modal-header{
@@ -83,7 +85,7 @@ body{
 	font-weight:bold;
 	margin-bottom:.5rem;
 }
-.form-control input{
+.form-control input,.form-control textarea{
 	padding:.8rem;
 	font-size:.8rem;
 	border:none;
@@ -114,7 +116,7 @@ body{
 	align-items: center;
 }
 
-.allPosts,.createPosts{
+.all-posts,.create-posts{
   padding: 1rem;
 	background-color: orange;
 	color: white;
@@ -124,4 +126,19 @@ body{
 	font-weight: bold;
 	margin-right: .5rem;
 	cursor: pointer;
+}
+
+.create-post{
+	padding: 1rem;
+	background-color: green;
+	color: white;
+	text-align: center;
+	border: none;
+	border-radius: .3rem;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.create-post-modal .modal{
+	width:80%;
 }
