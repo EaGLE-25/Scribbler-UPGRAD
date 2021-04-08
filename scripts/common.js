@@ -6,6 +6,7 @@ let signinModal = document.querySelector(".signin-modal");
 let notMemberSignUp = document.querySelector(".not-member .signup-link");
 let createPostBtn = document.querySelector(".create-posts");
 let createPostModal = document.querySelector(".create-post-modal");
+let allPostsBtn = document.querySelector(".all-posts");
 
 
 console.log(createPostBtn);
@@ -27,6 +28,10 @@ notMemberSignUp.addEventListener("click",(e)=>{
 	e.preventDefault();
 	closeModal(signinModal);
 	openModal(signupModal);
+})
+
+allPostsBtn.addEventListener("click",(e)=>{
+	window.location.href = "/html/postslist.html";
 })
 
 
