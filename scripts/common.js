@@ -9,7 +9,7 @@ let createPostModal = document.querySelector(".create-post-modal");
 let allPostsBtn = document.querySelector(".all-posts");
 
 
-console.log(createPostBtn);
+
 
 
 signupBtn.addEventListener("click",(e)=>{
@@ -34,7 +34,6 @@ allPostsBtn.addEventListener("click",(e)=>{
 	window.location.href = "/html/postslist.html";
 })
 
-
 function openModal(modal){
 	modal.classList.remove("hide");
 	modal.classList.add("show");
@@ -50,3 +49,4 @@ function closeModal(modal){
 	modal.classList.add("hide");
 	modal.classList.remove("show");
 }
+
