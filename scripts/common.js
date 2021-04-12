@@ -31,7 +31,7 @@ notMemberSignUp.addEventListener("click",(e)=>{
 })
 
 allPostsBtn.addEventListener("click",(e)=>{
-	window.location.href = "/html/postslist.html";
+	goToPage("/html/postslist.html");
 })
 
 function openModal(modal){
@@ -50,3 +50,6 @@ function closeModal(modal){
 	modal.classList.remove("show");
 }
 
+function goToPage(href){
+	window.location.href = href;
+}

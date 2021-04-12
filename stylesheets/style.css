@@ -126,6 +126,7 @@ body{
 	flex-grow: 1;
 }
 .modal-body{
+	color: black;
 	flex-grow: 2;
 }
 .modal-footer{
