@@ -2,10 +2,7 @@ let deletePostBtns = document.querySelectorAll(".delete-post");
 let deleteModal = document.querySelector(".delete-post-modal");
 let deleteYes = document.querySelector(".delete-yes");
 let deleteNo = document.querySelector(".delete-no");
-let moreInfoBtn = document.querySelector(".post-card .more-info");
-
-console.log(moreInfoBtn);
-
+let moreInfoBtns = document.querySelectorAll(".post-card .more-info");
 
 
 deletePostBtns.forEach(deletePostBtn=>{
@@ -20,10 +17,11 @@ deleteYes.addEventListener("click",(e)=>{
   deletePost(e.target.getAttribute("data-delete-post"));
 })
 
-moreInfoBtn.addEventListener("click",(e)=>{
-  goToPage("post.html");
+moreInfoBtns.forEach(moreInfoBtn=>{
+  moreInfoBtn.addEventListener("click",(e)=>{
+    goToPage("post.html");
+  })
 })
-
 
 function parentUntill(untill,element){
   let parentFound = false;
