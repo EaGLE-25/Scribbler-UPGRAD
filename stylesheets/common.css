@@ -80,6 +80,18 @@ body{
 .btn.btn-red{
   background:red;
   color:white;
+	transition: all .4s ease;
+}
+.btn.btn-red:hover{
+	background:rgb(230, 0, 0);
+}
+.btn.btn-pink{
+	background:rgb(255, 97, 123);
+	color: white;
+	transition: all .4s ease;
+}
+.btn.btn-pink:hover{
+	background:rgb(248, 82, 110);
 }
 
 
@@ -106,10 +118,10 @@ body{
 	align-items:center;
 	color:white;
 }
-.modal-container.show{
+.show{
 	display:flex;
 }
-.modal-container.hide{
+.hide{
 	display:none;
 }
 .modal{
