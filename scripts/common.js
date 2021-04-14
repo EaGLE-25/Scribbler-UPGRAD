@@ -1,3 +1,10 @@
+import {openModal} from "./commonFunctions.js";
+import {closeModal} from "./commonFunctions.js";
+import {closeModalById} from "./commonFunctions.js";
+import {goToPage} from "./commonFunctions.js";
+
+console.log(closeModalById);
+
 let signinBtn = document.querySelector(".signin");
 let signupBtn = document.querySelector(".signup");
 let modalCloseBtn = document.querySelector(".modal-close");
@@ -34,22 +41,22 @@ allPostsBtn.addEventListener("click",(e)=>{
 	goToPage("/html/postslist.html");
 })
 
-function openModal(modal){
-	modal.classList.remove("hide");
-	modal.classList.add("show");
-}
+// function openModal(modal){
+// 	modal.classList.remove("hide");
+// 	modal.classList.add("show");
+// }
 
-function closeModalById(modalID){
-	let modal = document.getElementById(modalID); 
-	modal.classList.add("hide");
-	modal.classList.remove("show");
-}
+// function closeModalById(modalID){
+// 	let modal = document.getElementById(modalID); 
+// 	modal.classList.add("hide");
+// 	modal.classList.remove("show");
+// }
 
-function closeModal(modal){
-	modal.classList.add("hide");
-	modal.classList.remove("show");
-}
+// function closeModal(modal){
+// 	modal.classList.add("hide");
+// 	modal.classList.remove("show");
+// }
 
-function goToPage(href){
-	window.location.href = href;
-}
+// function goToPage(href){
+// 	window.location.href = href;
+// }
