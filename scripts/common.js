@@ -1,13 +1,8 @@
-import {openModal} from "./commonFunctions.js";
-import {closeModal} from "./commonFunctions.js";
-import {closeModalById} from "./commonFunctions.js";
-import {goToPage} from "./commonFunctions.js";
-
-console.log(closeModalById);
+import * as util from "./commonFunctions.js";
 
 let signinBtn = document.querySelector(".signin");
 let signupBtn = document.querySelector(".signup");
-let modalCloseBtn = document.querySelector(".modal-close");
+let modalCloseBtns = document.querySelectorAll(".modal-close");
 let signupModal = document.querySelector(".signup-modal");
 let signinModal = document.querySelector(".signin-modal");
 let notMemberSignUp = document.querySelector(".not-member .signup-link");
@@ -16,47 +11,31 @@ let createPostModal = document.querySelector(".create-post-modal");
 let allPostsBtn = document.querySelector(".all-posts");
 
 
-
-
-
 signupBtn.addEventListener("click",(e)=>{
-	openModal(signupModal);
+	util.openModal(signupModal);
 })
 
 signinBtn.addEventListener("click",(e)=>{
-	openModal(signinModal);
+	util.openModal(signinModal);
 })
 
 createPostBtn.addEventListener("click",(e)=>{
-	openModal(createPostModal);
+	util.openModal(createPostModal);
 })
 
 notMemberSignUp.addEventListener("click",(e)=>{
 	e.preventDefault();
-	closeModal(signinModal);
-	openModal(signupModal);
+	util.closeModal(signinModal);
+	util.openModal(signupModal);
 })
 
 allPostsBtn.addEventListener("click",(e)=>{
-	goToPage("/html/postslist.html");
+	util.goToPage("/html/postslist.html");
 })
 
-// function openModal(modal){
-// 	modal.classList.remove("hide");
-// 	modal.classList.add("show");
-// }
-
-// function closeModalById(modalID){
-// 	let modal = document.getElementById(modalID); 
-// 	modal.classList.add("hide");
-// 	modal.classList.remove("show");
-// }
-
-// function closeModal(modal){
-// 	modal.classList.add("hide");
-// 	modal.classList.remove("show");
-// }
-
-// function goToPage(href){
-// 	window.location.href = href;
-// }
+modalCloseBtns.forEach(modalCloseBtn=>{
+	modalCloseBtn.addEventListener("click",(e)=>{
+		const modalToClose = util.parentUntill("modal-container",modalCloseBtn);
+		util.closeModal(modalToClose);
+	})
+})
